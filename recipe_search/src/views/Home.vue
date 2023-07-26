@@ -1,5 +1,8 @@
 <template>
-  <h2>Home</h2>
+    <div>
+        <h2>Home</h2>
+        <pre>{{ meals }}</pre>
+    </div>
 </template>
 
 <script setup lang="ts">
