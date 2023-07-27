@@ -2,6 +2,7 @@
     <div>
         <h2>Home</h2>
         <pre>{{ meals }}</pre>
+        <input type="text">
     </div>
 </template>
 
