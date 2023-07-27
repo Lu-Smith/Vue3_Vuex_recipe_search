@@ -1,6 +1,20 @@
 <template>
-    <div class="bg-gray-100 h-100">
-        <header class="bg-white shadow-md h-24">
+    <div class="bg-gray-100 h-full">
+        <header class="bg-white shadow h-16">
+            <router-link :to="{name: 'home'}">
+                Home
+            </router-link>
+            <div>
+                <router-link :to="{name: 'home'}">
+                    Search meals
+                </router-link>
+                <router-link :to="{name: 'home'}">
+                    by letter
+                </router-link>
+                <router-link :to="{name: 'home'}">
+                    by ingredient
+                </router-link>
+            </div>
 
         </header>
         <main>
