@@ -17,6 +17,12 @@ export interface Meal {
     strIngredient12?: string;
     strIngredient13?: string;
     strIngredient14?: string;
+    strIngredient15?: string;
+    strIngredient16?: string;
+    strIngredient17?: string;
+    strIngredient18?: string;
+    strIngredient19?: string;
+    strIngredient20?: string;
     strMeasure1?: string;
     strMeasure2?: string;
     strMeasure3?: string;
@@ -25,6 +31,7 @@ export interface Meal {
     strMeasure6?: string;
     strMeasure7?: string;
     strMeasure8?: string;
+    strSource: string;
 
     // Add other properties as needed
   }
