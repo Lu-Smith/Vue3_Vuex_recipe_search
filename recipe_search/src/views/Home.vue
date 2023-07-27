@@ -7,6 +7,7 @@
         <div class="flex gap-2 mt-2">
             <router-link :to="{name: 'byLetter', params: {letter}}" v-for="(letter, index) of letters" :key={index}>{{ letter }}</router-link>
         </div>
+        <pre>{{ ingredients }}</pre>
     </div>
 </template>
 
