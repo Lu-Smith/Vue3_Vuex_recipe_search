@@ -5,8 +5,7 @@
         class="rounded border-2 border-gray-200 w-full" 
         placeholder="Search for meals..."/>
         <div class="flex gap-1">
-            <pre>{{ letters }}</pre>
-            <router-link>{{ letter }}</router-link>
+            <router-link to="/" v-for="(letter, index) of letters" :key={index}>{{ letter }}</router-link>
         </div>
     </div>
 </template>
