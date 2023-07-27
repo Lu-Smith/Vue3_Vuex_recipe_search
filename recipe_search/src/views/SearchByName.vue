@@ -1,5 +1,10 @@
 <template>
-  <h2>Search by Name</h2>
+  <div class="p-8">
+    <input 
+        type="text" 
+        class="rounded border-2 border-gray-200 w-full" 
+        placeholder="Search for meals..."/>
+  </div>
 </template>
 
 <script lang="ts" setup>
