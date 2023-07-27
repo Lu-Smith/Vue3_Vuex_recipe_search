@@ -1,7 +1,5 @@
 <template>
-  <div>
-  <h2>Meals</h2>
-</div>
+  <h2>Search by Name</h2>
 </template>
 
 <script lang="ts" setup>
