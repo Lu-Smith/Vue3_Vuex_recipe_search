@@ -12,11 +12,11 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import store from "../store"
+import store from "../store";
 
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
 
-const meals = computed(() => store.state.meals)
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("")
+// www.themealdb.com/api/json/v1/1/list.php?i=list
 
 </script>
 
