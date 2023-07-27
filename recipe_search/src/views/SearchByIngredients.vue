@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h2>Search by ingredients</h2>
+  <h2>Search by Ingredients</h2>
 </div>
 </template>
 
