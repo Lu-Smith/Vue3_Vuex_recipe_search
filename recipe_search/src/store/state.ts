@@ -1,3 +1,5 @@
+import { Meal } from '../types/types';
+
 export default {
-   searchedMeals: []
+   searchedMeals: [] as Meal[],
 }
