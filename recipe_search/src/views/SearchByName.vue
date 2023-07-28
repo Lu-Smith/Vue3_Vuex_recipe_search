@@ -6,9 +6,10 @@
         placeholder="Search for meals..."
         @change="searchMeals"/>
         <div>
-          <pre>
-            {{ meals }}
-          </pre>
+          <div v-for="meal of meals" :key="meal.idMeal">
+            <img :src="meal.strMealThumb" :alt="meal.strMeal">
+
+          </div>
         </div>
   </div>
 </template>
