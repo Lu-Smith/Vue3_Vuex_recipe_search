@@ -8,6 +8,11 @@
         <div>
           <div v-for="meal of meals" :key="meal.idMeal">
             <img :src="meal.strMealThumb" :alt="meal.strMeal">
+            <h3>{{ meal.strMeal }}</h3>
+            <div>
+              <a :href="meal.strYouTube" target="_blank" >YouTube</a>
+              <button></button>
+            </div>
 
           </div>
         </div>
