@@ -5,11 +5,11 @@
         class="rounded border-2 border-gray-200 w-full" 
         placeholder="Search for meals..."
         @change="searchMeals"/>
-        <div>
-          <div v-for="meal of meals" :key="meal.idMeal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+          <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow">
             <img :src="meal.strMealThumb" :alt="meal.strMeal">
-            <h3>{{ meal.strMeal }}</h3>
-            <div>
+            <h3 class="p-3 font-semibold">{{ meal.strMeal }}</h3>
+            <div class="p-3">
               <a :href="meal.strYouTube" target="_blank" >YouTube</a>
               <a :href="meal.strSource" target="_blank" >Source</a>
               <router-link to="/">
