@@ -6,18 +6,21 @@
         placeholder="Search for meals..."
         @change="searchMeals"/>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-          <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow">
-            <img :src="meal.strMealThumb" :alt="meal.strMeal">
-            <h3 class="p-3 font-semibold">{{ meal.strMeal }}</h3>
-            <div class="p-3">
-              <a :href="meal.strYouTube" target="_blank" >YouTube</a>
-              <a :href="meal.strSource" target="_blank" >Source</a>
-              <router-link to="/">
-                View
-              </router-link>
-              <button></button>
+          <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
+            <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-t-xl h-48 w-full object-cover">
+            
+            <div class="px-3">
+              <h3 class="p-3 font-semibold">{{ meal.strMeal }}</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae incidunt, vel officiis possimus, molestiae cum ut magnam itaque id quidem dolorem neque repellendus facere tempore, asperiores atque. Quia, corporis molestias!</p>
+              <div class="p-3">
+                <a :href="meal.strYouTube" target="_blank" >YouTube</a>
+                <a :href="meal.strSource" target="_blank" >Source</a>
+                <router-link to="/">
+                  View
+                </router-link>
+                <button></button>
+              </div>
             </div>
-
           </div>
         </div>
   </div>
