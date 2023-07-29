@@ -28,11 +28,12 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref, computed, onMounted } from 'vue';
+  import { ref, onMounted } from 'vue';
+  import { computed } from '@vue/reactivity'
   import { useRoute } from 'vue-router';
   import store from '../store/index.js';
 
-  const route = useRoute
+  const route = useRoute()
   const keyword = ref('')
   const meals = computed(() => store.state.searchedMeals)
 
@@ -41,7 +42,7 @@
   }
 
   onMounted(() => {
-    keyword.value = route.params.name
+    keyword.value = route.params.name as string
     if (keyword.value) {
       searchMeals()
     }
