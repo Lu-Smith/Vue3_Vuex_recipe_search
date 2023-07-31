@@ -1,7 +1,8 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 pb-0">
     <input 
         type="text" 
+        v-model="keyword"
         class="rounded border-2 border-gray-200 w-full" 
         placeholder="Search for meals..."
         @change="searchMeals"/>
@@ -33,12 +34,17 @@
   import { useRoute } from 'vue-router';
   import store from '../store/index.js';
 
+
+
   const route = useRoute()
   const keyword = ref('')
   const meals = computed(() => store.state.searchedMeals)
 
+  
+
   function searchMeals() {
     store.dispatch('searchMeals', keyword.value)
+    console.log('keyword', keyword.value)
   }
 
   onMounted(() => {
