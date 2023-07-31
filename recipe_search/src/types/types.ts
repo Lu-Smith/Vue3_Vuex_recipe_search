@@ -5,6 +5,7 @@ export interface Meal {
     strArea: string;
     strMealThumb: string;
     strYouTube: string;
+    strInstructions: string;
     strIngredient1?: string;
     strIngredient2?: string;
     strIngredient3?: string;

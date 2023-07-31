@@ -13,9 +13,10 @@
             </router-link>
             <div class="p-3">
               <h3 class="font-bold">{{ meal.strMeal }}</h3>
-              <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae incidunt, vel officiis possimus, molestiae cum ut magnam itaque id quidem dolorem neque repellendus facere tempore, asperiores atque. Quia, corporis molestias!</p>
+              <h4 class="font-italic">{{ meal.strArea }}</h4>
+              <p class="mb-4">{{ meal.strInstructions }}</p>
               <div class="flex justify-center gap-5">
-                <a :href="meal.strYouTube" target="_blank" class="px-3 py-2 rounded border-2 border-red-600 hover:bg-red-500 hover:text-white transition-colors" >YouTube</a>
+                <a :href="meal.strYoutube" target="_blank" class="px-3 py-2 rounded border-2 border-red-600 hover:bg-red-500 hover:text-white transition-colors" >YouTube</a>
                 <a :href="meal.strSource" target="_blank" class="px-3 py-2 rounded border-2 border-orange-600 hover:bg-orange-500 hover:text-white transition-colors">Source</a>
                 <router-link to="/" class="px-3 py-2 rounded border-2 border-green-600 hover:bg-green-500 hover:text-white transition-colors">
                   View
