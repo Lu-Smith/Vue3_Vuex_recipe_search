@@ -4,7 +4,7 @@
         <pre>{{ meal }}</pre>
         <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
         <img :src="meal.strMealThumb" :alt="meal.strMeal">
-        <div class="grid grid-cols-1 md:grid-cols-3 text-lg py-2">
+        <div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
             <div>
                 <strong>Category:</strong> {{ meal.strCategory }}
             </div>
@@ -16,19 +16,16 @@
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2">
         <div>
-            <h2 class="text-2xl font-semibold mb-3">Ingredients</h2>
+            <h2 class="text-2xl font-semibold mb-2">Ingredients</h2>
             <ul>
                 <template v-for="(i, index) of new Array(20)" :key="index">
                     <li v-if="meal[`strIngredient${index + 1}`]">
-                        {{ index + 1 }} {{ meal[`strIngredient${index + 1}`] }}
+                        <span class="text-orange-800 italic">{{ index + 1 }}.</span> <strong>{{ meal[`strMeasure${index + 1}`] }} - {{ meal[`strIngredient${index + 1}`] }}</strong>
                     </li>
                </template>
             </ul>
-        </div>
-        <div>
-            <h2 class="text-2xl font-semibold mb-3">Measures</h2>
         </div>
     </div>
   </div>
