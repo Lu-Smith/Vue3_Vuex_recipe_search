@@ -35,6 +35,7 @@ export interface Meal {
     strMeasure7?: string;
     strMeasure8?: string;
     strSource: string;
+    strTags: string;
 
     // Add other properties as needed
   }
