@@ -4,7 +4,7 @@
         <pre>{{ meal }}</pre>
         <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
         <img :src="meal.strMealThumb" :alt="meal.strMeal">
-        <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 text-lg py-2">
             <div>
                 <strong>Category:</strong> {{ meal.strCategory }}
             </div>
@@ -14,7 +14,14 @@
             <div>
                 <strong>Tags:</strong> {{ meal.strTags }}
             </div>
-           
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div>
+            <h2>Ingredients</h2>
+        </div>
+        <div>
+            <h2>Measures</h2>
         </div>
     </div>
   </div>
