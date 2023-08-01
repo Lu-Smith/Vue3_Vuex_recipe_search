@@ -19,9 +19,9 @@
         <div>
             <h2 class="text-2xl font-semibold mb-2">Ingredients</h2>
             <ul>
-                <template v-for="(i, index) of new Array(20)" :key="index">
-                    <li v-if="meal[`strIngredient${index + 1}`]">
-                        <span class="text-orange-800 italic">{{ index + 1 }}.</span> <strong>{{ meal[`strMeasure${index + 1}`] }} - {{ meal[`strIngredient${index + 1}`] }}</strong>
+                <template v-for="index in 20" :key="index">
+                    <li v-if="meal[`strIngredient${index}`]">
+                        <span class="text-orange-800 italic">{{ index}}.</span> <strong>{{ meal[`strMeasure${index}`] }} - {{ meal[`strIngredient${index}`] }}</strong>
                     </li>
                </template>
             </ul>

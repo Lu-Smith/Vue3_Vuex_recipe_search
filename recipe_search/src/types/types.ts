@@ -36,6 +36,7 @@ export interface Meal {
     strMeasure8?: string;
     strSource: string;
     strTags: string;
+    [key: string]: string | undefined;
 
     // Add other properties as needed
   }
