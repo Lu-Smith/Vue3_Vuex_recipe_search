@@ -27,9 +27,14 @@ const routes = [
                 component: SearchByIngredients
             },
             {
-                path: '/by-letterletter/:letter?',
+                path: '/by-letter/:letter?',
                 name: 'byLetter',
                 component: SearchByLetter
+            },
+            {
+                path: '/meal/:id?',
+                name: 'mealDetails',
+                component: MealDetails
             }
         ]
     },
