@@ -7,13 +7,18 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router';
+import axiosClient from '../axiosClient';
 
 const route = useRoute()
 const meal = ref({})
 
 onMounted(() => {
-    route.params.id
-    
+    axiosClient.get(`lookup.php?i=${route.params.id}`)
+    .then(({ data }) => {
+        debugger;
+        meal.value = data
+    })
+
 })
 
 
