@@ -6,13 +6,13 @@
         <img :src="meal.strMealThumb" :alt="meal.strMeal">
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div>
-                Category: {{ meal.strCategory }}
+                <strong>Category:</strong> {{ meal.strCategory }}
             </div>
             <div>
-                Area: {{ meal.strArea }}
+                <strong>Area:</strong> {{ meal.strArea }}
             </div>
             <div>
-                Tags: {{ meal.strTags }}
+                <strong>Tags:</strong> {{ meal.strTags }}
             </div>
            
         </div>
