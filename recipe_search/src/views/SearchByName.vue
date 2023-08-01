@@ -7,8 +7,11 @@
         placeholder="Search for meals..."
         @change="searchMeals"/>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-          <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
-            <router-link to="/">
+          <div 
+          v-for="meal of meals" 
+          :key="meal.idMeal" 
+          class="bg-white shadow rounded-xl">
+            <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
               <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-t-xl h-48 w-full object-cover">
             </router-link>
             <div class="p-3">
