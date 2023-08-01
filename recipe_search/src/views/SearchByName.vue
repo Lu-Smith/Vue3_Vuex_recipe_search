@@ -19,7 +19,7 @@
               <h4 class="font-italic">{{ meal.strArea }}</h4>
               <p class="mb-4">{{ meal.strInstructions.slice(0, 360) }}...</p>
               <div class="flex justify-center gap-5">
-                <a :href="meal.strYoutube" target="_blank" class="px-3 py-2 rounded border-2 border-red-600 hover:bg-red-500 hover:text-white transition-colors" >YouTube</a>
+                <YouTubeButton :href="meal.strYoutube" />
                 <a :href="meal.strSource" target="_blank" class="px-3 py-2 rounded border-2 border-orange-600 hover:bg-orange-500 hover:text-white transition-colors">Source</a>
                 <router-link to="/" class="px-3 py-2 rounded border-2 border-green-600 hover:bg-green-500 hover:text-white transition-colors">
                   View
@@ -37,6 +37,7 @@
   import { computed } from '@vue/reactivity'
   import { useRoute } from 'vue-router';
   import store from '../store/index.js';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
   const route = useRoute()
   const keyword = ref('')
