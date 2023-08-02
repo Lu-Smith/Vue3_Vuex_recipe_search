@@ -20,14 +20,14 @@
 </template>
 
 <script lang="ts">
+import { Meal } from '../types/types';
 
-export default ({
-    props: {
-    meal: Object
-}
-
-})
-
-
-
+export default {
+  props: {
+    meal: {
+      type: Object as () => Meal,
+      required: true,
+    },
+  },
+};
 </script>

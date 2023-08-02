@@ -50,7 +50,7 @@ import { Meal } from '../types/types';
 
 const route = useRoute()
 const meal = ref<Meal>({
-    idMeal: '',
+  idMeal: '',
   strMeal: '',
   strCategory: '',
   strArea: '',
