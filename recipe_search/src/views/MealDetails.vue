@@ -28,7 +28,7 @@
         </div>
     </div>
     <div>
-        <YouTubeButton />
+        <YouTubeButton :href="meal.strYouTube">YouTube</YouTubeButton>
     </div>
   </div>
 </template>
