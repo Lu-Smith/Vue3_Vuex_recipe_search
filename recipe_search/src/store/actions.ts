@@ -7,16 +7,16 @@ export function searchMeals({commit}:any, keyword:string) {
     })
 }
 
-export function mealsByLetter({commit}:any, letter:string) {
+export function searchMealsByLetter({commit}:any, letter:string) {
     axiosClient.get(`search.php?f=${letter}`)
     .then(({ data }) => {
-        commit('setMealsByLetters', data.meals)
+        commit('setSerchedMealsByLetters', data.meals)
     })
 }
 
-export function mealsByIngredients({commit}:any, ingredient:string) {
+export function searchMealsByIngredients({commit}:any, ingredient:string) {
     axiosClient.get(`filter.php?i=${ingredient}`)
     .then(({ data }) => {
-        commit('setMealsByIngredients', data.meals)
+        commit('setSearchedMealsByIngredients', data.meals)
     })
 }

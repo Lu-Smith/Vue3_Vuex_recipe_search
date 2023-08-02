@@ -20,10 +20,18 @@ import store from '../store/index.js';
 
 const route = useRoute()
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
-const meals = computed(() => store.state.mealsByLetter);
+const meals = computed(() => store.state.searchedMealsByLetter);
+
+function searchMealsByLetter() {
+    store.dispatch('searchMealsByLetter', route.params.letter)
+  }
 
 onMounted(() => {
-    store.dispatch('mealsByLetter', route.params.letter)
+    const letter = route.params.letter
+    console.log(letter)
+    if(letter){
+        searchMealsByLetter()
+    }
 })
 
 </script>
