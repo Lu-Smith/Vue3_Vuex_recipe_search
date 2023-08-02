@@ -7,12 +7,12 @@
    </a>
 </template>
 
-<script lang="ts" setup >
+<script lang="ts">
 
-const props = defineProps({
-    href: String
-})
-
-console.log(props)
+export default {
+  props: {
+    href: String,
+  },
+};
 
 </script>

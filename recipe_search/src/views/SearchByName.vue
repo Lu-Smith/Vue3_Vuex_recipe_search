@@ -37,7 +37,7 @@
   import { computed } from '@vue/reactivity'
   import { useRoute } from 'vue-router';
   import store from '../store/index.js';
-import YouTubeButton from '../components/YouTubeButton.vue';
+  import YouTubeButton from '../components/YouTubeButton.vue';
 
   const route = useRoute()
   const keyword = ref('')
@@ -57,7 +57,3 @@ import YouTubeButton from '../components/YouTubeButton.vue';
   })
 
 </script>
-
-<style>
-
-</style>
