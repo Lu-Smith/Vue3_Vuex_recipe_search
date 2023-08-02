@@ -14,13 +14,16 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import store from '../store/index.js';
 
-
+const route = useRoute()
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
-const meals = computed(() => {
-    store.state.mealsByLetter
+const meals = computed(() => store.state.mealsByLetter);
+
+onMounted(() => {
+    store.dispatch('mealsByLetter', route.params.letter)
 })
 
 </script>
