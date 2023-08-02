@@ -9,7 +9,7 @@
               <p class="mb-4">{{ meal.strInstructions.slice(0, 360) }}...</p>
               <div class="flex justify-center gap-5">
                 <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
-                <SourceButton :href="meal.strSource">Source</SourceButton>
+                <SourceButtton :href="meal.strSource">Source</SourceButtton>
                 <router-link to="/" class="px-3 py-2 rounded border-2 border-green-600 hover:bg-green-500 hover:text-white transition-colors">
                   View
                 </router-link>
@@ -21,13 +21,16 @@
 
 <script lang="ts">
 import { Meal } from '../types/types';
+import SourceButtton from './SourceButtton.vue';
+import YouTubeButton from './YouTubeButton.vue';
 
 export default {
-  props: {
-    meal: {
-      type: Object as () => Meal,
-      required: true,
+    props: {
+        meal: {
+            type: Object as () => Meal,
+            required: true,
+        },
     },
-  },
+    components: { YouTubeButton, SourceButtton }
 };
 </script>
