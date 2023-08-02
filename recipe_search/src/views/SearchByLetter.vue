@@ -7,12 +7,21 @@
         :key="letter">
             {{ letter }}
         </router-link>
+        <div>
+            <pre>{{ meals }}</pre>
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
+import store from '../store/index.js';
+
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
+const meals = computed(() => {
+    store.state.mealsByLetter
+})
 
 </script>
   
