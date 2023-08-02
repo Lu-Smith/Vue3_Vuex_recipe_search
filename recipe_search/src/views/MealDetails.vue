@@ -14,7 +14,7 @@
                 <strong>Tags:</strong> {{ meal.strTags }}
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 mb-10 mt-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 mb-8 mt-5">
             <div >
                 <h2 class="text-2xl font-semibold mb-2">Ingredients</h2>
                 <ul>
@@ -26,7 +26,11 @@
                 </ul>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="mb-8">
+            <strong class="text-lg py-2">Instructions</strong>
+            <div>{{ meal.strInstructions }}</div>
+        </div>
+        <div class="flex justify-center gap-5">
             <YouTubeButton :href="meal.strYoutube">
                 YouTube
             </YouTubeButton>
